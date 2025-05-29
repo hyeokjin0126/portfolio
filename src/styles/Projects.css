@@ -1,0 +1,142 @@
+.projects {
+  padding: 100px 0;
+  background: white;
+}
+
+.projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.projects-subtitle {
+  font-size: 1.2rem;
+  color: var(--gray);
+  margin-bottom: 60px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  height: 120px;
+  background: linear-gradient(135deg, 
+    rgba(255, 107, 157, 0.1), 
+    rgba(78, 205, 196, 0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.project-emoji {
+  font-size: 3rem;
+}
+
+.project-content {
+  padding: 30px;
+  text-align: left;
+}
+
+.project-content h3 {
+  margin-bottom: 15px;
+  color: var(--dark-gray);
+}
+
+.project-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, 
+    rgba(255, 107, 157, 0.1), 
+    rgba(78, 205, 196, 0.1));
+  color: var(--dark-gray);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 107, 157, 0.2);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-pink);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  color: var(--dark-pink);
+  transform: translateX(5px);
+}
+
+/* 카드별 그라데이션 효과 */
+.project-card:nth-child(1) .project-image {
+  background: linear-gradient(135deg, #ff6b9d, #ff8cc8);
+}
+
+.project-card:nth-child(2) .project-image {
+  background: linear-gradient(135deg, #4ecdc4, #7ed5cf);
+}
+
+.project-card:nth-child(3) .project-image {
+  background: linear-gradient(135deg, #ffb3d1, #ffc8dc);
+}
+
+.project-card:nth-child(4) .project-image {
+  background: linear-gradient(135deg, #a8e6cf, #c7f0db);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .project-content {
+    padding: 25px;
+  }
+  
+  .tech-stack {
+    gap: 6px;
+  }
+  
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 5px 10px;
+  }
+} 

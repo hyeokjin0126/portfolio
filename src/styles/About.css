@@ -1,0 +1,134 @@
+.about {
+  padding: 100px 0;
+  background-color: var(--light-gray);
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-text h2 {
+  margin-bottom: 30px;
+}
+
+.about-text p {
+  margin-bottom: 25px;
+}
+
+.stats {
+  display: flex;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary-pink), var(--primary-blue));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-placeholder {
+  width: 100%;
+  max-width: 400px;
+  height: 300px;
+  background: linear-gradient(135deg, 
+    rgba(255, 107, 157, 0.1), 
+    rgba(78, 205, 196, 0.1));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 107, 157, 0.2);
+}
+
+.code-snippet {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.code-line {
+  margin-bottom: 8px;
+}
+
+.keyword {
+  color: var(--primary-pink);
+  font-weight: 600;
+}
+
+.variable {
+  color: var(--primary-blue);
+}
+
+.operator {
+  color: var(--gray);
+}
+
+.string {
+  color: var(--dark-pink);
+}
+
+.function {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.bracket {
+  color: var(--gray);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .stats {
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .image-placeholder {
+    height: 250px;
+  }
+  
+  .code-snippet {
+    font-size: 1rem;
+  }
+} 
